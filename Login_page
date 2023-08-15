@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>LOGIN_PAGE</title>
+        <script src="https://kit.fontawesome.com/4d3805a9af.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        *{
+            margin:0%;
+        }
+        body{
+            background-image: url('wa.jpg');
+            background-size: 100% 100%;
+            background-repeat:no-repeat ;
+            padding:20% 25%;
+        }
+        .total{
+            background-color:rgba(255,255,255,.4);
+            
+        }
+        .total h1{
+            text-align: center;
+        }
+        .total .user{
+            position:relative;
+
+            width: 90%;
+            height:40%;
+            margin: 30px;
+            
+            
+        }
+        
+        .user input{
+            width:90%;
+            height:40%;
+            border:none;
+            outline:none;
+            background: transparent;
+            border: 2px solid rgba(255,255,255,.2);
+            border-radius:40px;
+            padding:5%;
+            color:black;
+            font-size:25;
+            
+        }
+        .user i{
+            position:relative;
+            right:20px;
+            right:6%;
+        }
+        .total .remember{
+            padding:5%;
+            display:flex;
+            justify-content: space-between;
+        }
+        .total a{
+            text-decoration:None;
+        }
+        .total  :hover{
+            text-decoration: underline;
+
+        }
+        .total button{
+            padding: 5%;
+            width: 90%;
+            height: 40%;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            cursor: pointer;
+            margin-left:5%;
+           
+            
+
+
+        }
+        .total .register{
+            padding-left:30%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+        }
+    </style>
+    <body background>
+        <div class="total">
+        <h1>LOGIN</h1>
+        <div class="user">
+            <input placeholder="Username"> <i class="fa-solid fa-person"></i>
+        </div>
+        
+        <div class="user">
+            <input type="Password" placeholder="Password"><i class="fa-solid fa-lock"></i><br>
+        </div>
+        <div class="remember">
+            <label>
+                <input type="checkbox" >Remember me
+            </label>
+            <a href="#"; >Forgot Password</a>
+        </div>
+        
+        
+        <button>Login</button>
+        <div class="register">
+            <p>Dont't have an account?
+            <a href="#">REGISTER</a>
+
+        </div>
+    </div>  
+    </body>
+
+</html>
