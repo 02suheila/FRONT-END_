@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>GOOGLE_BAR</title>
+        <script src="https://kit.fontawesome.com/4d3805a9af.js" crossorigin="anonymous"></script>
+        <style>
+            .search{
+                border-style:none;
+                outline:None;
+                width:89%;
+                font-size:17px;
+                margin-left:3%;
+            }
+            .main_search{
+                box-shadow:1px 1px 6px rgba(0,0,0,0.4);
+                /*border: 1px solid black;*/
+                width:35%;
+                padding:1%;
+                border-radius: 25px;
+                margin-top:22%;
+                margin-left:32%;
+
+            }
+            .fa-solid{
+                color:pink;
+            }
+            .fa-magnifying-glass{
+                color:blue;
+                font-size:13px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="search" type="/" placeholder="Search Google or type a URL"/>
+            <i class="fa-solid fa-microphone"></i>
+        </div>
+        
+    </body>
+</html>
