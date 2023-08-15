@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>dropdown list</title>
+        <link rel="stylesheet" href="ddcss.css">
+    </head>
+    
+    <body>
+        <div class="menu">
+        
+           
+            <ul>
+                <li><a href="#" style="background-color: skyblue;border-width:35px;">Home</a></li>
+                <li><a href="#">About Us</a>
+                    <div class="sub-menu1">
+                        <ul>
+                            <li><a href='#'>HELP</a></li>
+                            <li><a href='#'>Contact</a></LI>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Investors</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>CSS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  *{
+    margin:0;
+    padding:0%;
+    box-sizing:border-box;
+}
+body{
+    background-image: url('wall.webp');
+    background-size:cover;
+    background-position: center;
+    
+}
+.menu{
+    background-color: palevioletred;
+    
+    
+}
+.menu ul{
+    display: inline-flex;
+    list-style:none;
+   
+}
+.menu ul li{
+    padding:15px;
+    margin:15px;
+    width:120px;
+    text-decoration: none;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+li:hover{
+    background-color: skyblue;
+    
+}
+.sub-menu1{
+    display:none;
+}
+.menu ul li:hover .sub-menu1{
+    display:block;
+    position:absolute;
+    background-color: palevioletred;
+    margin-top:15px;
+}
+.menu ul li:hover .sub-menu1 ul{
+    display: block;
+    margin:10px;
+}
+.menu ul li:hover .sub-menu1 ul li{
+    border-bottom:1px dotted white;
+    width:100px;
+    background:transparent;
+    
+
+}
+.menu ul li:hover .sub-menu1 ul li:last-child{
+    border-bottom:none;
+}
+.menu ul li:hover .sub-menu1 ul li a:hover{
+    color: blueviolet;
+}
