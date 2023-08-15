@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>mobile_site</title>
+        <link rel="stylesheet" href="mobile.css">
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="logo">
+                    <img src="oppo.jpg">
+                </div>>
+                <div class="links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Cart</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="info">
+                <div class="overlay">
+
+                </div>
+                <img src="mob.jpg" class="mobile">
+                <div id="circle">
+                    <div class="features one">
+                        <img src="cam.jpg">
+                        <div>
+                            <h3>CAMERA</h3>
+                            <p>12MP,Wide Angle Lens</p>
+                        </div>
+                    </div>
+                    <div class="features two">
+                        <img src="bat.jpg">
+                        <div>
+                            <div>
+                                <h3>BATTERY</h3>
+                                <p>5000mAh,720HRS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features three">
+                        <img src="dis.jpg">
+                        <div>
+                            <h3>DISPLAY</h3>
+                            <p>6.5" Mini-Drop Fullscreen</p>
+                        </div>
+                    </div>
+                    <div class="features four">
+                        <img src="pro.jpg">
+                        <div>
+                            <h3>PROCESSOR</h3>
+                            <p> Snapdragon octa-core 11nm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <img src="up.png" id="up">
+                <h4>FEATURES</h4>
+                <img src="up.png" id="down">
+            </div>
+            
+        </div>
+        <script>
+            var c=document.getElementById("circle");
+            var up=document.getElementById("up");
+            var down=document.getElementById("down");
+            var rv=circle.style.transform;
+            var rs;
+
+            up.onclick =function(){
+                rs=rv+"rotate(-90deg)";
+                circle.style.transform=rs;
+                rv=rs;
+            }
+            down.onclick =function(){
+                rs=rv+"rotate(90deg)";
+                circle.style.transform=rs;
+                rv=rs;
+            }
+        </script>
+    </body>
+</html>
