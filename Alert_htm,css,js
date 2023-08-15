@@ -1,0 +1,154 @@
+<!--<html>
+    <head>
+        <title>alert</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+               
+            }
+            .cont{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                background-color: aqua;
+                align-items: center;
+                justify-content: center;
+            }
+            #rr{
+                margin-top: 250px;
+                width: 10%;
+                border-radius: 50%;
+                background-color: lemonchiffon;
+                cursor: pointer;
+            }
+            .boxr{
+                width: 400px;
+                
+                
+                border-radius: 6px;
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                padding: 30px;
+            }
+            .boxr img{
+                width: 100px;
+                margin-top: -50px;
+                border-radius: 50%;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
+            
+        </style>
+        <script>
+            function fun(){
+                alert('hey uu')
+            }
+        </script>
+    </head>
+    <body>
+        <div class="cont">
+        <center>
+            <button id="rr" onclick="fun()">SUBMIT</button>
+        </center>
+        <div class="boxr" style="background-color: white;">
+            <img src="ti.avif" width="10%">
+            <h3>Thank You</h3>
+            <p>You details has been successfully submitted.Thanks!</p>
+            <button type="button">OK</button>
+
+        </div>
+        
+    </div>
+        
+    </body>
+    
+</html>
+-->
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container{
+                width: 100%;
+                height: 100vh;
+                background-color:darkcyan;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+            .btn{
+                cursor: pointer;
+                padding:10px 10px;
+                background-color:yellowgreen;
+                box-shadow: 0 2px 5px green;
+                outline: none;
+                border-radius: 50%;
+            }
+            .popup{
+                width: 400px;
+                background-color: white;
+                border-radius: 6px;
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                padding: 0 30px 30px;
+                color:green;
+                visibility: hidden;
+                transition: transform 0.4s,top 0.4s;
+            }
+            .open_popup{
+                visibility: visible;
+            }
+            .close_popup{
+                visibility: hidden;
+            }
+            
+            .popup img{
+                margin-top: -50px;
+                border-radius: 50%;
+            }
+            #ok{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: green;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body >
+        <div class="container">
+            <button type="submit" class="btn" onclick="open_popup()">SUBMIT</button>
+            <div class="popup" id="pup">
+                <img src="ti.avif" width="100px" height="100px">
+                <h2>THANK YOU!</h2>
+                <p style="color: yellowgreen;">Your Details Are Successfully Submitted</p>
+                <br>
+                <button id="ok">OK</button>
+            </div>
+        </div>
+        <script>
+            var a=document.getElementById("pup");
+            function open_popup(){
+                
+                a.classList.add("open_popup");
+            }
+            function close_popup(){
+                
+                a.classList.remove("close_popup");
+            }
+        </script>
+        
+        
+    </body>
+</html>
