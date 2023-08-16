@@ -1,1 +1,119 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> HTML & JS FILE
+<html>
+    <head>
+        <title>WEATHER_APP</title>
+        <link rel="stylesheet" href="style-weather.css">
+    </head>
+    <body>
+        <div class="box">
+            <div class="search">
+                <input text="text" placeholder="ENTER CITY NAME">
+                <button><img src="se.jpg" width="50px"></button>
+            </div>
+            <br/>
 
+            <div class="weather_none">
+                <img class="imageone" src="rain.png" width="90px"></div><br/>
+                <h1 class="temp">22°c</h1><br/>
+                <h2 class="city">Kakinada</h2>
+
+            </div>
+        </div>
+        <script>
+            const apiKey="9914c9cfab5747d98df8eeb52b1c2193";
+            const apiUrl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+            
+            const answer= document.querySelector(".search input");
+            const answerbtn= document.querySelector(".search button");
+            const weathericon=document.querySelector(".imageone");
+
+            async function weather_dis(city){
+                const response=await fetch( apiUrl + city + `&appid=${apiKey}`);
+                var data =await response.json();
+                console.log(data);
+
+                document.querySelector(".city").innerHTML=data.name;
+                document.querySelector(".temp").innerHTML=Math.round(data.main.temp)+" "+"°c";
+
+                if(data.weather[0].main=='Clouds'){
+                    weathericon.src="clouds.avif"
+                }
+                else if(data.weather[0].main=='drizzle'){
+                    weathericon.src="drizzle.jpg"
+                }
+                else if(data.weather[0].main=='Clear'){
+                    weathericon.src="clear.jpg"
+                }
+                else if(data.weather[0].main=='Mist'){
+                    weathericon.src="mist.png"
+                }
+                else if(data.weather[0].main=='Rain'){
+                    weathericon.src="rain.png"
+                }
+                else if(data.weather[0].main=='Wind'){
+                    weathericon.src="wind.jpg"
+                }
+                else if(data.weather[0].main=='Snow'){
+                    weathericon.src="snow.jpg"
+                }
+                document.querySelector(".weather_none").style.display="block";
+                
+            }
+            answerbtn.addEventListener("click",()=>{
+                weather_dis(answer.value);
+            })
+            
+        </script>
+    </body>
+</html>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> CSS FILE
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(rgb(189, 40, 129),rgb(20, 222, 128));
+
+}
+.box{
+    width: 300px;
+    background: linear-gradient(rgb(20, 222, 128),rgb(189, 40, 129));
+    text-align: center;
+    max-width: 450px;
+    padding: 40px 35px;
+    border-radius: 20px;
+    margin: 100px auto 0;
+    color: #fff;
+   
+}
+.box .search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    width: 70%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    outline :none;
+    text-align: center;
+    background-color:white;
+    font-size: 90%;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background:white;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+.search img{
+    width: 30px;
+    cursor: pointer;
+}
+.weather_none{
+    display: none;
+}
